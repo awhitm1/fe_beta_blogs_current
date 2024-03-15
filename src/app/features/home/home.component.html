@@ -1,1 +1,1 @@
-<app-blog-list [blogs] = "homeBlogs"/>
+<app-blog-list [blogs]="homeBlogs" (onChangeBlogs)="homeBlogs = $event" />

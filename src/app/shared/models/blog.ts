@@ -5,6 +5,8 @@ export class Blog {
   title: string = '';
   content: string = '';
   cover_image_url: string = '';
+  liked?: boolean = false;
+	likes_count?: number = 0;
   user_id?: number;
   user?: User;
 }

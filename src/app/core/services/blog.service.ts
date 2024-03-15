@@ -17,4 +17,12 @@ export class BlogService {
   createBlog(blog: FormData): Observable<Blog> {
     return this.http.post<Blog>(`${environment.apiUrl}/blogs`, blog);
   }
+
+  likeBlog(blogId: number): Observable<Blog> {
+    return this.http.post<Blog>(`${environment.apiUrl}/blogs/${blogId}/like`, {});
+  }
+
+  unLikeBlog(blogId: number): Observable<Blog> {
+    return this.http.delete<Blog>(`${environment.apiUrl}/blogs/${blogId}/unlike`, {});
+  }
 }
